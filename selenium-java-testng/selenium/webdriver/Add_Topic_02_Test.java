@@ -1,10 +1,9 @@
 package webdriver;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class Add_Topic_02 {
+public class Add_Topic_02_Test {
     WebDriver driver;
 
     @Test
