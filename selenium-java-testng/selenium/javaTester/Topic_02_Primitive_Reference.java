@@ -28,5 +28,11 @@ public class Topic_02_Primitive_Reference {
         c.x=200;
         System.out.println(c.x);
         System.out.println(d.x);
+
+        //
+        Topic_02_Primitive_Reference e = new Topic_02_Primitive_Reference();
+        System.out.println(c.x);
+        System.out.println(d.x);
+        System.out.println(e.x);
     }
 }
