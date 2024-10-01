@@ -28,8 +28,7 @@ public class Topic_05_Demo_Xpath {
     }
     @Test
     public void TC_02_Xpath_Demo_Contains_Text() {
-        driver.get("""
-                https://automationfc.github.io/basic-form/""");
+        driver.get("https://automationfc.github.io/basic-form/");
         //Text nằm trong chinnh note đó, không lấy trong note con
         //Nedtext nhưng chỉ lấy được text ở index 1
         //Lấy được khoảng trắng/xuống dòng/tab vì tương đối mà
