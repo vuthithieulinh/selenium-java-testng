@@ -82,7 +82,7 @@ public class Topic_05_Demo_Xpath {
     }
     @Test
     public void TC_06_Outside_Parent() {
-        driver.get("http://live.techpanda.org/index.php/mobile.html");
+        driver.get("d");
         //Outside là có nhiều các element không nằm trong cùng 1 cha
         //Dùng index[] phía sau để tìm
         driver.findElement(By.xpath("(//span[text()='Add to Cart'])[3]"));
