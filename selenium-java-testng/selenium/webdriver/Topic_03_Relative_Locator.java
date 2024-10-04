@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.locators.RelativeLocator;
+//import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Topic_03_Relative_Locator {
     WebDriver driver;
@@ -17,6 +18,10 @@ public class Topic_03_Relative_Locator {
     @BeforeClass
     public void BeforeClass() {
         driver = new FirefoxDriver();
+        //Selenium version 3x
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        //Selenium version 4x
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
@@ -38,12 +43,13 @@ public class Topic_03_Relative_Locator {
 //        // Khi chỉ dùng 1 lần
 //        driver.findElement(emailTextboxBy).sendKeys("");
 
-        WebElement priceFromeElement = driver.findElement(RelativeLocator.with(By.tagName("input"))
-                .toLeftOf(By.name("price[to]"))
-                .below(By.id("sku"))
-                .above(By.id("tax_class_id")));
-        //System.out.println(priceFromeElement);
-        priceFromeElement.sendKeys("100");
+        //Selenium version 4
+//        WebElement priceFromeElement = driver.findElement(RelativeLocator.with(By.tagName("input"))
+//                .toLeftOf(By.name("price[to]"))
+//                .below(By.id("sku"))
+//                .above(By.id("tax_class_id")));
+//        //System.out.println(priceFromeElement);
+//        priceFromeElement.sendKeys("100");
     }
     @Test
     public void TC_02_XPath() {

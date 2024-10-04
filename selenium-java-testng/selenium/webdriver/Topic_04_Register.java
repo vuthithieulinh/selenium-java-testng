@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Topic_04_Register {
     WebDriver driver;
@@ -16,6 +17,10 @@ public class Topic_04_Register {
     @BeforeClass
     public void BeforeClass() {
         driver = new FirefoxDriver();
+        //Selenium version 3x
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        //Selenium version 4x
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
