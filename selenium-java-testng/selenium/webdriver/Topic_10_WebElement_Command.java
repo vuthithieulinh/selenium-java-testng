@@ -143,6 +143,10 @@ public class Topic_10_WebElement_Command {
         element.getScreenshotAs(OutputType.FILE); // *
         element.getScreenshotAs(OutputType.BYTES);
         element.getScreenshotAs(OutputType.BASE64); // *
+
+        // Cho nghỉ 3s
+        //Thread.sleep(3000);
+
 //========TONG KET===================================
 // * : Có dùng nhưng ít
 // ** : Có dùng và dùng rất nhiều
